@@ -1,10 +1,24 @@
 import { MenuItem } from '../types';
 
-export const HERO_IMAGE_URL =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuB8WUvBwuJ85vQZV0dMSHnZSqwdAV6y0kdWIVmK1GSuLbghrIQ8npq4AURcAkMdD43JsRoxdgVQg0LJANLmI-AHr9JwvUd2nlwiG3Cl0Hf6M_v_eD7sgLwY0C8F_jAbwjOgmbdVXOmncNddd9B5ETPtuOX5Z8R-4kmR411PuhyMkbGX7R8hidM_9qHPdRtBkGHzTK2tJdbat7kBDU0q5bIZyY_U98Nfan0KlDWVotpWiqen-yHr_lvRCN0Gm5W6G9g08Hd_lzl_DOEL';
+import heroImg from '../assets/images/hero.jpg';
+import lolaPortraitImg from '../assets/images/lola-portrait.jpg';
+import croquetasTostonesImg from '../assets/images/croquetas-tostones.jpg';
+import tamalEnHojaImg from '../assets/images/tamal-en-hoja.jpg';
+import yucaConMojoImg from '../assets/images/yuca-con-mojo.jpg';
+import lechonAsadoImg from '../assets/images/lechon-asado.jpg';
+import ropaViejaImg from '../assets/images/ropa-vieja.jpg';
+import arrozConPolloImg from '../assets/images/arroz-con-pollo.jpg';
+import flanDeLecheImg from '../assets/images/flan-de-leche.jpg';
+import tresLechesImg from '../assets/images/tres-leches.jpg';
+import cascosDeGuayabaImg from '../assets/images/cascos-de-guayaba.jpg';
+import mojitoClasicoImg from '../assets/images/mojito-clasico.jpg';
+import daiquiriFresaImg from '../assets/images/daiquiri-fresa.jpg';
+import cafecitoCubanoImg from '../assets/images/cafecito-cubano.jpg';
+import ubicacionMapaImg from '../assets/images/ubicacion-mapa.jpg';
 
-export const LOLA_PORTRAIT_URL =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuDxrTew-rKS7WIdwZclka6NkGZlfBJb4FmzzHp82EhciqpYneWlnZjcfyRmY8xR1kyFoVbDdr75bSzAbnaKc5EfhF3tsJoEbA0um9LfnLCYntMXOEL3P887CkhcOM7I_AdU-yHGmngRti8IvyI3ONJG-KIka0pYMCA3SOF0Br-LC3KDZG4CsUTRBpk2EQd4JKCH-_3eqRhJkAi_7KHSK84gmYu9MAwE2M-mwgpbMVXUAWPwfpTCtxb_tWVxWt4_b88hlBJQ6214KIiu';
+export const HERO_IMAGE_URL = heroImg;
+export const LOLA_PORTRAIT_URL = lolaPortraitImg;
+export const UBICACION_MAPA_URL = ubicacionMapaImg;
 
 export const MENU_ITEMS: MenuItem[] = [
   // --- ENTRADAS ---
@@ -14,8 +28,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'entradas',
     description: 'Clásicos aperitivos cubanos, crujientes y dorados.',
     price: 8.0,
-    imageUrl:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuA4Y3DOyBmHDWM7wGh4IYnziz7wAJOuyUx7WrBDTZcnxBbWzcD9Zvjb6Z4h563IC2oY2by-n6G_vt0ma_bgm2EB__vblB3KyUGwvJUmD_sAUqCg2_TbVoxwkE3acv0EQXaFxM8DTbKv1obaKhje8pe9-1AWNdlNtBuEcwJDRO87_sex6hiOeEmoFjSRDun6LHP11iDC-HPIUfosgEGACjb2OdVtRsapdEe4QOTk50ElfM9gUS3xIiLg8AcaydWdLqI0iFuOGlAr31SC',
+    imageUrl: croquetasTostonesImg,
     featured: true,
     tags: ['Clásico Cubano', 'Crujiente', 'Especial de la Casa'],
     grandmotherNote:
@@ -35,8 +48,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'entradas',
     description: 'Maíz tierno molido con sofrito criollo y carne de cerdo tierna, envuelto en hoja.',
     price: 7.5,
-    imageUrl:
-      'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
+    imageUrl: tamalEnHojaImg,
     tags: ['Receta Tradicional', 'Maíz Fresco'],
     grandmotherNote:
       'El secreto de un buen tamal está en desgranar el maíz tierno en casa y mezclarlo con abundante comino y ajo asado.',
@@ -50,8 +62,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'entradas',
     description: 'Yuca hervida al punto suave, bañada en mojo caliente de ajo, cebolla morada y naranja agria.',
     price: 6.5,
-    imageUrl:
-      'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80',
+    imageUrl: yucaConMojoImg,
     tags: ['Vegetariano', 'Sin Gluten'],
     grandmotherNote:
       'El choque del aceite caliente con el ajo machacado y el jugo de naranja agria despierta el aroma de toda la mesa.',
@@ -67,8 +78,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'fuertes',
     description: 'Cerdo asado lentamente con mojo criollo, acompañado de yuca.',
     price: 18.5,
-    imageUrl:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDaS8pc-w98D_WHAXOtKc2eEz5aX1ye5MsITCbO5TGAYo6DVPVQWERlOC0mCmnRNC8wn6z0QZiuPVbuzEu7uYSdmQSfEvnl_7IW10rBnXGvDSLs5nblvnIfzEa-hIVFhUJ3jP57FiBgYNwcTvewBjcpQasZ4uVPfbcQqohZFrua6dZ9Dx1tZrZ69HeWQLi0W91WEyku2eBFq0m6_16h5mvYSQxFfrFjUpdCKQr0sar3JfIn6CyAqkNyVKZtmtuLmpjvLb2k0i87u1Dg',
+    imageUrl: lechonAsadoImg,
     featured: true,
     tags: ['Estrella de Lola', 'Sin Gluten', 'Cocina Lenta'],
     grandmotherNote:
@@ -89,8 +99,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'fuertes',
     description: 'Carne de res deshebrada cocinada en salsa de tomate criolla, pimientos asados y vino seco.',
     price: 17.0,
-    imageUrl:
-      'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
+    imageUrl: ropaViejaImg,
     tags: ['Plato Nacional', 'Sabroso'],
     grandmotherNote:
       'El nombre cuenta la leyenda de un viejo padre que no tenía qué dar a su familia y cocinó sus propias ropas con tanto amor que se convirtieron en un festín.',
@@ -104,8 +113,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'fuertes',
     description: 'Arroz amarillo caldoso con jugosas piezas de pollo campesino, cerveza, pimientos y guisantes.',
     price: 16.5,
-    imageUrl:
-      'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80',
+    imageUrl: arrozConPolloImg,
     tags: ['Para Compartir', 'Reconfortante'],
     grandmotherNote:
       'A la chorrera significa que el arroz queda meloso y brillante, cocinado en un caldo rico en azafrán y cerveza rubia.',
@@ -121,8 +129,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'postres',
     description: 'Tradicional flan bañado en caramelo oscuro.',
     price: 6.0,
-    imageUrl:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuB05pvL-aJDPHR_imQQq-lQrfhwlDLRsJkW1j8SuA9IovMmARUysC6E6kuy6OUSJl31NaQGfRf6nVyNypfaETYG0nG04Kmt9UjOYns2mTAjsi-U_4fUV54OheF5mh680UX-zwwrXre0OpQqfzNcvMigu3d-JlexrKYxpIa93ms5MwSXn045e4pbaGZLt8RzC-pW_MfNiZdHs4Xf2_039lCi27IMZ6IqA-dPye05K7Exfc6JhfU7zDkFY6fYTOAVzXS1PUNJnIXUWom8',
+    imageUrl: flanDeLecheImg,
     featured: true,
     tags: ['Casero', 'Receta de la Abuela'],
     grandmotherNote:
@@ -142,8 +149,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'postres',
     description: 'Bizcocho esponjoso embebido en tres leches con un toque de ron añejo y merengue suizo quemado.',
     price: 7.0,
-    imageUrl:
-      'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80',
+    imageUrl: tresLechesImg,
     tags: ['Favorito de la Casa'],
     grandmotherNote:
       'Dejamos reposar el bizcocho toda la noche para que absorba cada gota sin perder su ligereza celestial.',
@@ -157,8 +163,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'postres',
     description: 'Guayabas rojas en almíbar de canela con generosas porciones de queso crema cubano.',
     price: 5.5,
-    imageUrl:
-      'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80',
+    imageUrl: cascosDeGuayabaImg,
     tags: ['Clásico Cubano', 'Sin Gluten'],
     grandmotherNote:
       'El matrimonio perfecto en la cocina cubana: la dulzura frutal de la guayaba con la cremosidad láctea ligeramente salada.',
@@ -174,8 +179,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'bebidas',
     description: 'Refrescante mezcla de ron, hierbabuena, limón y soda.',
     price: 9.0,
-    imageUrl:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCJaQYWpISvscsiYujJCZFtnPEF4PVEEIJAxdNNGf1HlqC0pWrvEYGXz7igBbTYa1tRoUeCuArut7-VN4LJuD_0OrmyWeZBZEHlANf1ugKlf68YQ7yZA-ZUTtZP3a56RI6j3kIMiFzgv87h0Fc_BIv4riVJVAL4WeXVyl4QuilhkITjUA-pgo28NESQTYc5Pyclk-ShhHun17ftrf-l9ie2KiOBSuGF0BZQbBtEvMFfpPFyBRg5OQmHPYc2rrH9PtUdVGBJdz8YMjRg',
+    imageUrl: mojitoClasicoImg,
     featured: true,
     tags: ['Ron Cubano', 'Coctelería', 'Refrescante'],
     grandmotherNote:
@@ -196,8 +200,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'bebidas',
     description: 'Ron blanco, fresas naturales, zumo de limón verde y hielo frappé preparado al momento.',
     price: 9.5,
-    imageUrl:
-      'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80',
+    imageUrl: daiquiriFresaImg,
     tags: ['Coctelería Habanera', 'Frappé'],
     grandmotherNote:
       'El famoso cóctel de El Floridita en La Habana Vieja, equilibrado entre el dulzor de la fresa y la viveza del limón.',
@@ -211,8 +214,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'bebidas',
     description: 'Expreso oscuro y concentrado coronado con una capa gruesa de espumita dorada de azúcar.',
     price: 3.5,
-    imageUrl:
-      'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80',
+    imageUrl: cafecitoCubanoImg,
     tags: ['Café Artesanal', 'Energía Criolla'],
     grandmotherNote:
       'La verdadera espumita se logra batiendo las primeras gotas del expreso caliente con el azúcar hasta que parezca caramelo.',

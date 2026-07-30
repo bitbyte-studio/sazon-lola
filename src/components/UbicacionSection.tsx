@@ -8,6 +8,7 @@ import {
   Navigation,
   CheckCircle2,
 } from 'lucide-react';
+import { UBICACION_MAPA_URL } from '../data/menuData';
 
 export const UbicacionSection: React.FC = () => {
   const [showHours, setShowHours] = useState(false);
@@ -54,8 +55,7 @@ export const UbicacionSection: React.FC = () => {
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-90"
             style={{
-              backgroundImage:
-                'url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1400&q=80")',
+              backgroundImage: `url("${UBICACION_MAPA_URL}")`,
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f5238]/80 via-[#0f5238]/30 to-transparent" />
