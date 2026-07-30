@@ -1,5 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { MessageCircle, Menu as MenuIcon, X, ShoppingBag, Calendar } from 'lucide-react';
+
+const navLinkClass = (isScrolled: boolean, isActive: boolean) =>
+  `font-body-md text-base transition-colors hover:opacity-80 ${
+    isScrolled
+      ? isActive
+        ? 'text-[#b1f0ce]'
+        : 'text-white hover:text-[#b1f0ce]'
+      : isActive
+        ? 'text-[#0f5238] font-semibold'
+        : 'text-[#1c1b1b] hover:text-[#0f5238]'
+  }`;
 
 interface NavbarProps {
   cartCount: number;
@@ -39,41 +51,35 @@ export const Navbar: React.FC<NavbarProps> = ({
     >
       <div className="flex justify-between items-center h-20 px-4 md:px-6 max-w-[1200px] mx-auto">
         {/* Logo */}
-        <a
-          href="#"
+        <Link
+          to="/"
           className={`font-headline-md text-2xl italic transition-colors ${
             isScrolled ? 'text-white' : 'text-[#0f5238]'
           }`}
         >
           La Sazón de Lola
-        </a>
+        </Link>
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center gap-6">
-          <a
-            href="#menu"
-            className={`font-body-md text-base transition-colors hover:opacity-80 ${
-              isScrolled ? 'text-white hover:text-[#b1f0ce]' : 'text-[#1c1b1b] hover:text-[#0f5238]'
-            }`}
+          <NavLink
+            to="/menu"
+            className={({ isActive }) => navLinkClass(isScrolled, isActive)}
           >
             Menú
-          </a>
-          <a
-            href="#historia"
-            className={`font-body-md text-base transition-colors hover:opacity-80 ${
-              isScrolled ? 'text-white hover:text-[#b1f0ce]' : 'text-[#1c1b1b] hover:text-[#0f5238]'
-            }`}
+          </NavLink>
+          <NavLink
+            to="/historia"
+            className={({ isActive }) => navLinkClass(isScrolled, isActive)}
           >
             Historia
-          </a>
-          <a
-            href="#ubicacion"
-            className={`font-body-md text-base transition-colors hover:opacity-80 ${
-              isScrolled ? 'text-white hover:text-[#b1f0ce]' : 'text-[#1c1b1b] hover:text-[#0f5238]'
-            }`}
+          </NavLink>
+          <NavLink
+            to="/ubicacion"
+            className={({ isActive }) => navLinkClass(isScrolled, isActive)}
           >
             Ubicación
-          </a>
+          </NavLink>
         </div>
 
         {/* Desktop Actions */}
@@ -152,27 +158,39 @@ export const Navbar: React.FC<NavbarProps> = ({
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#fcf9f8] text-[#1c1b1b] border-t border-[#bfc9c1]/30 px-4 py-5 shadow-lg animate-fadeIn">
           <div className="flex flex-col gap-4">
-            <a
-              href="#menu"
+            <NavLink
+              to="/menu"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-body-md text-base py-2 border-b border-[#eae7e7] text-[#1c1b1b]"
+              className={({ isActive }) =>
+                `font-body-md text-base py-2 border-b border-[#eae7e7] ${
+                  isActive ? 'text-[#0f5238] font-semibold' : 'text-[#1c1b1b]'
+                }`
+              }
             >
               Menú
-            </a>
-            <a
-              href="#historia"
+            </NavLink>
+            <NavLink
+              to="/historia"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-body-md text-base py-2 border-b border-[#eae7e7] text-[#1c1b1b]"
+              className={({ isActive }) =>
+                `font-body-md text-base py-2 border-b border-[#eae7e7] ${
+                  isActive ? 'text-[#0f5238] font-semibold' : 'text-[#1c1b1b]'
+                }`
+              }
             >
               Historia
-            </a>
-            <a
-              href="#ubicacion"
+            </NavLink>
+            <NavLink
+              to="/ubicacion"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-body-md text-base py-2 border-b border-[#eae7e7] text-[#1c1b1b]"
+              className={({ isActive }) =>
+                `font-body-md text-base py-2 border-b border-[#eae7e7] ${
+                  isActive ? 'text-[#0f5238] font-semibold' : 'text-[#1c1b1b]'
+                }`
+              }
             >
               Ubicación
-            </a>
+            </NavLink>
 
             <div className="flex flex-col gap-2 pt-2">
               <button

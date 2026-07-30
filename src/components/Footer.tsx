@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface FooterProps {
   onOpenReservation: () => void;
   onOpenCart: () => void;
 }
+
+const footerLinkClass =
+  'font-body-md text-base text-[#404943] hover:text-[#a33d23] hover:underline transition-all focus:ring-2 focus:ring-[#0f5238] outline-none';
 
 export const Footer: React.FC<FooterProps> = ({ onOpenReservation, onOpenCart }) => {
   return (
@@ -11,9 +15,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenReservation, onOpenCart })
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-[1200px] mx-auto">
         {/* Column 1 */}
         <div className="flex flex-col gap-3">
-          <span className="font-headline-md text-2xl font-bold text-[#0f5238]">
+          <Link to="/" className="font-headline-md text-2xl font-bold text-[#0f5238]">
             La Sazón de Lola
-          </span>
+          </Link>
           <p className="font-body-md text-base text-[#404943]">
             Auténtica Cocina Cubana.
           </p>
@@ -24,24 +28,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenReservation, onOpenCart })
 
         {/* Column 2 */}
         <div className="flex flex-col gap-2">
-          <a
-            className="font-body-md text-base text-[#404943] hover:text-[#a33d23] hover:underline transition-all focus:ring-2 focus:ring-[#0f5238] outline-none"
-            href="#menu"
-          >
+          <Link className={footerLinkClass} to="/menu">
             Menú
-          </a>
-          <a
-            className="font-body-md text-base text-[#404943] hover:text-[#a33d23] hover:underline transition-all focus:ring-2 focus:ring-[#0f5238] outline-none"
-            href="#historia"
-          >
+          </Link>
+          <Link className={footerLinkClass} to="/historia">
             Historia
-          </a>
-          <a
-            className="font-body-md text-base text-[#404943] hover:text-[#a33d23] hover:underline transition-all focus:ring-2 focus:ring-[#0f5238] outline-none"
-            href="#ubicacion"
-          >
+          </Link>
+          <Link className={footerLinkClass} to="/ubicacion">
             Ubicación
-          </a>
+          </Link>
           <button
             onClick={onOpenReservation}
             className="font-body-md text-base text-[#404943] hover:text-[#a33d23] hover:underline transition-all text-left focus:ring-2 focus:ring-[#0f5238] outline-none"
