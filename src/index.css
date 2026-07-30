@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-headline-xl {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+  .font-headline-lg {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  .font-headline-md {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  .font-body-lg {
+    font-family: 'Inter', sans-serif;
+  }
+  .font-body-md {
+    font-family: 'Inter', sans-serif;
+  }
+  .font-label-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+  }
+  .font-label-sm {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s infinite ease-in-out;
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite ease-in-out;
+}
+
+/* Custom scrollbar matching Cuban warm theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f6f3f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d6a4f;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0f5238;
+}
